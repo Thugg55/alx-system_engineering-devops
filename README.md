@@ -1,2 +1,1 @@
-# alx-system_engineering-devops
-Basics on SHELL
+reading and learning all about the shell and it Terminal
