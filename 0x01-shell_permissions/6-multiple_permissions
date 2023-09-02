@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod 754 helli
+chmod 754 hello
