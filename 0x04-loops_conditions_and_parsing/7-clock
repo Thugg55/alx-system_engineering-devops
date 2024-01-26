@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# Script prints out the time for 12 hours and 59 minutes
+
+hour=0
+minute=0
+while [ hour < 13 || minutes < 60 ]
+do
+# convert 60 minutes to hour
+	if [ "$minute" -eq "60" ];
+	then
+		minute=0
+	fi
+
+#prints hour if minutes equals 0
+	if [ "$minute" -eq 0];
+	then
+		echo "Hour: $hour"
+		(( hour++ ))
+	else
+		echo "$minute"
+	fi
+	(( minute++ ))
+done
