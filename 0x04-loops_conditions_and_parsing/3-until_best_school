@@ -5,5 +5,5 @@ range="0"
 until [ $range -ge 10 ]
 do
 echo "Best School"
-range=$((i + 1))
+range=$((range + 1))
 done
