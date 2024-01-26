@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# script loops through 0 - 20
+# prints "bad luck from china" for 4th iteration
+# prints "bad luck from japan " for 9th iteration
+# prints "bad luck from italy" for 17th iteration
+# else prints number
+
+range=1
+while [ $range -le 20 ]
+do
+	echo "$range"
+	case $range in
+		"4")
+			echo "bad luck from China"
+			;;
+		"9")
+			echo "bad luck from Japan"
+			;;
+		"17")
+			echo "bad luck from Italy"
+			;;
+	esac
+	(( range++ ))
+done
