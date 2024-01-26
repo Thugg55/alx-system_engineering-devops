@@ -2,8 +2,8 @@
 # Script displays "Best School" 10 times
 
 range=0
-while [ $range -lt 10]
-do
-echo "Best School"
-(( range++ ))
+while [ $range -lt 10 ]
+	do
+		echo "Best School"
+		range=$((range + 1))
 done
