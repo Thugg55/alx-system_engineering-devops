@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Bash Script indefintely writes "I am alive"
+# Pauses two seconds each time it writes
+# output is redirected and appeneded eveyr time program writes into the file;
+# /tmp/my_process
+
+while true
+do
+	echo "I am alive!" >> /tmp/my_process
+	sleep 2
+done
