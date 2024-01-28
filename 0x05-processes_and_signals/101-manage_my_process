@@ -1,4 +1,4 @@
-nages the script manage_my_process.
+#!/usr/bin/env bash
 #   When passed the argument `start`:
 #     1. Starts manage_my_process
 #     2. Creates a file containings its PID in /var/run/my_process.pid
@@ -20,7 +20,7 @@ if [ "$1" == "start" ]
 then
   ./manage_my_process &
   echo $$ > /var/run/my_process.pid
-  echo "manage_my_process started"
+ sudo ./101-manage_my_processsudo ./101-manage_my_process echo "manage_my_process started"
 
 elif [ "$1" == "stop" ]
 then
