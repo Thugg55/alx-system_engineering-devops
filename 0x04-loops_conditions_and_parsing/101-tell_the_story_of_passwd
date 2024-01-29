@@ -2,7 +2,7 @@
 # Bash script displays the content of the file "etc/passwd".
 # Script only displays Username, user id and home directory path for the user
 
-while IFS=':' read username password uid gid info home shell;
+while IFS=':' read -r username password uid gid info home shell;
 do
 	echo "The user $username is part of the $gid gang, "\
 	"lives in $home and rides $shell."\
