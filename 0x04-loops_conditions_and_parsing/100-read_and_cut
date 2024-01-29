@@ -2,7 +2,7 @@
 # Bash script displays the content of the file /etc/passwd
 # Bash script only displays the username, user id, and user home directory path
 
-while read passwd;
+while read -r passwd;
 do
 	echo "$passwd" | cut -d ':' -f1,3,6
 done < "/etc/passwd"
