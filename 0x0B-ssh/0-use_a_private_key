@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Bash Script uses ssh to connect to my server,
+# the private key ~/.ssh/school will be used,
+# user is 'ubuntu'.
+
+# Initializing Server address
+server_address="172.17.0.19"
+
+# Command to connect ssh to my server address
+# using private key and user
+ssh -i ~/.ssh/school ubuntu@"$server_address"
