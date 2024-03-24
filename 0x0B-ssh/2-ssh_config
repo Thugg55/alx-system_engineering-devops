@@ -1,0 +1,6 @@
+# configure ssh cient; easy connection to a server
+# without the requirement of a password.
+
+Host *
+	PasswordAuthentification no
+	IdentifyFile ~/.ssh/school
