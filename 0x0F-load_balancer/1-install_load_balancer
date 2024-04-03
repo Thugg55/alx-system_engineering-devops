@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# Script to install and configure HAProxy on lb-01 server
+
+sudo apt-get -y update
+apt-get -y install haproxy
+
+# fix config
+server_c=\
+"
+frontend putech-frontend
+	bind *:80
+	mode http
+	default_backend putech-backend
+backend putech-backend
+	balance roundrobin
+	server 18989-web-01 54.160.65.25:80 check
+	server 18989-web-02 3.90.80.134:80 check
+"
+
+echo "$server_c" | sudo tee -a /etc/default/haproxy.cfg
+
+# manage haproxy via init script
+echo "ENABLED=1" | sudo tee -a /etc/default/haproxy
+
+sudo service haproxy restart
