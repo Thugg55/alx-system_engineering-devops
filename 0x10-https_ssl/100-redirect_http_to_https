@@ -22,7 +22,7 @@ frontend putech-frontend-http
     bind   0.0.0.0:80
     reqadd X-Forwarded-Proto:\ http
     default_backend www-backend
-    redirect scheme https code 301 if !{ ssl_fc }
+    redirect scheme https code 301 if !{ 'ssl_fc' }
 
 frontend putech-frontend-https
     bind   0.0.0.0:443 ssl crt /etc/haproxy/certs/www.putech.tech
@@ -33,6 +33,6 @@ frontend putech-frontend-https
 
 backend putech-backend
     balance  roundrobin
-    redirect scheme https if !{ ssl_fc }
+    redirect scheme https if !{ 'ssl_fc' }
     server 18989-web-01 54.160.65.25:80 check
     server 18989-web-02 3.90.80.134:80 check
