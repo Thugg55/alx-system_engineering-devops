@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-apt update
 apt install nginx -y
 ufw allow 'Nginx HTTP'
 nginx -t
