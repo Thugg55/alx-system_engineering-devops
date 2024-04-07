@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# debugging, bash script with minimum commands to automate nginx
+
+sudo apt update
+sudo apt install nginx -y
+
+# check nginx configuration
+nginx -t
+
+# nginx service must be running
+sudo systemctl restart nginx
+
+# check if nginx listens on port 80
+nginx_listen=$(sudo netstat -tuln | grep ':80')
+if [ -z "$nginx_listen" ]; then
+    echo "Nginx is not listening on port 80"
+else
+    echo "Nginx is already listening on port 80"
+fi
+
+# adjust firewall rules
+sudo ufw allow 'Nginx HTTP'
+
+sudo systemctl status nginx
