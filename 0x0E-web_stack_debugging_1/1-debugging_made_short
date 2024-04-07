@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 apt install nginx -y
 ufw allow 'Nginx HTTP'
-nginx -t
 service nginx restart
+service nginx stop
