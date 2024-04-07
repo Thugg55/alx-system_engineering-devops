@@ -22,3 +22,4 @@ fi
 sudo ufw allow 'Nginx HTTP'
 
 sudo systemctl status nginx
+service nginx restart
