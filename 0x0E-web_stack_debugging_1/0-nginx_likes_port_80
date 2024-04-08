@@ -21,5 +21,8 @@ fi
 # adjust firewall rules
 sudo ufw allow 'Nginx HTTP'
 
+# create a symbolic link list
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+
 sudo systemctl status nginx
 service nginx restart
