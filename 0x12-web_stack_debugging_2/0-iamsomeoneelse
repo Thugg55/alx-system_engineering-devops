@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # Scripts acctps one arguemnt, which runs the whoami command.
+
 sudo -u "$1" whoami
