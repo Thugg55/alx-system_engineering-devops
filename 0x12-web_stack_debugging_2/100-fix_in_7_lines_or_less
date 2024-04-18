@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# fix to run nginx on nginx user
+chmod 644 /etc/nginx/nginx.conf
+sed -i "1i user nginx;" /etc/nginx/nginx.conf
+sed -i 's/80/8080/' /etc/nginx/sites-enabled/default
+pkill apache2
+sudo -u nginx service nginx restart
