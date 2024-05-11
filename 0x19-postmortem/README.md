@@ -1,4 +1,4 @@
-######A POSTMORTEM (INCIDENT REPORT) FOR OUR E-COMMERCE PLATFORM
+**A POSTMORTEM (INCIDENT REPORT) FOR OUR E-COMMERCE PLATFORM**
 
 ISSUE SUMMARY.
 On May 8, 2024, at 10:45 AM UTC, our e-commerce platform experienced a 2-hour outage, affecting approximately 30% of our users. During this period, users were unable to place orders or access their accounts, resulting in significant revenue loss and customer dissatisfaction. A erroneously setup database connection was the primary cause of the outage, which resulted in a cascade failure of the backend services for our application.
