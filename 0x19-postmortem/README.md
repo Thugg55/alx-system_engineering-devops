@@ -4,7 +4,7 @@ ISSUE SUMMARY.
 On May 8, 2024, at 10:45 AM UTC, our e-commerce platform experienced a 2-hour outage, affecting approximately 30% of our users. During this period, users were unable to place orders or access their accounts, resulting in significant revenue loss and customer dissatisfaction. A erroneously setup database connection was the primary cause of the outage, which resulted in a cascade failure of the backend services for our application.
 
 TIMELINE.
-10:45 AM UTC - Our monitoring system detected an issue and alerted our on-call engineer about a surge in error rates and slow response times.
+10:45 AM UTC - Our monitoring system detected an issue and alerted our on-call engineer about a surge in error rates and slow response times
 10:50 AM UTC - The engineer looked into the problem and started troubleshooting it by looking through server logs and network configurations. Initially, he suspected a problem with network connectivity.
 11:00 AM UTC - The engineer escalated the issue to the DevOps team, who began to investigate the application's backend services, assuming the issue was related to a server overload.
 11:20 AM UTC - The DevOps team discovered that a misconfigured database connection was the root of the problem, not server congestion. They began to troubleshoot the database connection and verify the configuration.
